@@ -2,6 +2,8 @@
 
 The official SDK for UniSMS https://unismsapi.com/ for sending and retrieving SMS messages.
 
+This is Vanilla PHP.
+
 ## Send a message
 
 
