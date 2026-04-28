@@ -18,6 +18,21 @@ $client->content = "Hello world";
 $client->send();
 ```
 
+## Send a message with your custom Sender id: MyBusiness
+
+```php
+require_once './UniSms.php';
+
+$secret_key = "sk_XXXXXXXXXXXXXXXXXXXXXXXXX";
+
+$client = new UniSms($secret_key);
+$client->recipient = "+63912345678";
+$client->content = "Hello world";
+$client->sender_id = "MyBusiness";
+
+$client->send();
+```
+
 ## Get a message
 
 
