@@ -4,9 +4,12 @@
 // https://unismsapi.com
 class UniSms {
   public const API_URL = 'https://unismsapi.com/api/sms';
+
   private $secret_key;
+
   public $recipient;
   public $content;
+  public $sender_id;
 
   public function __construct($secret_key) {
     $this->secret_key = $secret_key;
@@ -35,7 +38,8 @@ class UniSms {
 
     $payload = json_encode([
       "recipient" => $this->recipient,
-      "content" => $this->content
+      "content" => $this->content,
+      "sender_id" => $this->sender_id ?? "UniSMS"
     ]);
 
     $ch = curl_init(self::API_URL);
